@@ -2,7 +2,7 @@ import express from 'express';
 import { db } from './db/db.js';
 import routes from './routes/index.js';
 
-const app = express();
+export const app = express();
 
 const PORT = process.env.PORT || 4000;
 
@@ -20,3 +20,5 @@ db.connect()
     // eslint-disable-next-line no-undef
     process.exit(1);
   });
+
+export default app;

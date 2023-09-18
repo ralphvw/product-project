@@ -9,10 +9,11 @@ const { genericErrorMessage } = constants;
 
 function hashPassword(req, res, next) {
   try {
-    const hash = bcrypt.hashSync(req.password, 12);
+    const hash = bcrypt.hashSync(req.body.password, 12);
     req.hash = hash;
     return next();
   } catch (error) {
+    console.log({ error });
     return res.status(500).json({ message: genericErrorMessage });
   }
 }

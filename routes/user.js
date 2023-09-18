@@ -1,7 +1,7 @@
 import express from 'express';
-import UserController from '../controller/user';
-import AuthMiddleWare from '../middleware/auth.middleware';
-import ValidationMiddleware from '../middleware/validation.middleware';
+import UserController from '../controller/user.js';
+import AuthMiddleWare from '../middleware/auth.middleware.js';
+import ValidationMiddleware from '../middleware/validation.middleware.js';
 
 const { createUser } = UserController;
 const { checkIfUserNameExists, validateUserInput } = ValidationMiddleware;

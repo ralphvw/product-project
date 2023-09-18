@@ -8,12 +8,13 @@ class ProductController {
   static async createProduct(req, res) {
     try {
       const data = await createProduct(req.body);
-      return res.status(200).json({
+      return res.status(201).json({
         message: genericSuccessMessage,
         data,
       });
     } catch (error) {
       console.log({ error });
+      //logger
       return res.status(500).json({
         message: genericErrorMessage,
       });

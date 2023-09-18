@@ -13,13 +13,13 @@ class UserService {
     return db.oneOrNone(createUser, [email, username, hash]);
   }
 
-  static async login(username, password) {
+  static async login(username, userPassword) {
     const user = await db.oneOrNone(checkForUsername, [username]);
     if (!user) {
       return { status: 401, message: 'Invalid username or password' };
     }
 
-    if (!bcrypt.compareSync(password, user.password)) {
+    if (!bcrypt.compareSync(userPassword, user.password)) {
       return { status: 401, message: 'Invalid username or password' };
     }
 

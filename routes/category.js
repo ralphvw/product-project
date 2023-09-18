@@ -1,5 +1,5 @@
 import express from 'express';
-import CategoryController from '../controller/category';
+import CategoryController from '../controller/category.js';
 
 const { createCategory, getProductsPerCategory } = CategoryController;
 
