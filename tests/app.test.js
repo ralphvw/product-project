@@ -6,6 +6,8 @@ import { userData } from '../fixtures/user.fixture.js';
 
 let categoryId;
 describe('Testing Express Endpoints', () => {
+  //Write your assignment here
+
   it('should test for create user', async () => {
     const res = await request(app).post('/api/v1/users').send(userData);
     expect(res.status).to.equal(201);
