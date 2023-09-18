@@ -1,0 +1,24 @@
+TABLES
+User
+-email
+-username
+-password
+
+Category
+-name
+
+Products
+-name
+-price
+-quantity_sold
+-quantity
+-category_id references category
+
+Create endpoints to:
+1. Sign up a user
+2. Login a user
+3. Create a category
+4. Create a product
+5. Buy a product (when a user buys a product, increase quantity_sold by 1) (user must be logged in)
+6. Fetch all products in a particular category
+7. Fetch all products(include the category name for each product)
